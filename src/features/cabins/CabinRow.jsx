@@ -1,7 +1,6 @@
 import styled from "styled-components";
 import { formatCurrency } from "../../utils/helpers";
 import {
-  QueryClient,
   useMutation,
   useQueryClient,
 } from "@tanstack/react-query";
