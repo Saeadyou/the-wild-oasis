@@ -34,7 +34,7 @@ export async function createEditCabin(newCabin, id) {
       .eq("id", id)
       .select();
 
-  const { data, error } = await query.select();
+  const { data, error } = await query.select().single();
 
   if (error) {
     throw new Error("Cabin could not be created");
@@ -52,6 +52,8 @@ export async function createEditCabin(newCabin, id) {
       "Cabin image could not be uploaded and cabin was not created"
     );
   }
+
+  return data;
 }
 
 export async function deleteCabin(id) {
