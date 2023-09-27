@@ -12,6 +12,7 @@ import Users from "./pages/Users";
 import Settings from "./pages/Settings";
 import Account from "./pages/Account";
 import Login from "./pages/Login";
+import Checkin from "./pages/Checkin";
 import PageNotFound from "./pages/PageNotFound";
 import AppLayout from "./ui/AppLayout";
 
@@ -36,6 +37,7 @@ function App() {
             <Route path="bookings" element={<Bookings />} />
             <Route path="bookings/:bookingId" element={<Booking />} />
             <Route path="cabins" element={<Cabins />} />
+            <Route path="checkin/:bookingId" element={<Checkin />} />
             <Route path="users" element={<Users />} />
             <Route path="settings" element={<Settings />} />
             <Route path="account" element={<Account />} />
@@ -53,7 +55,7 @@ function App() {
           success: {
             duration: 3000,
           },
-          error:{
+          error: {
             duration: 5000,
           },
           style: {
