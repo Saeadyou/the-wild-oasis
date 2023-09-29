@@ -51,9 +51,9 @@ function UpdateSettingsForm() {
         <Input
           type="number"
           id="breakfast-price"
-          defaultValue={settings.brealfastPrice}
+          defaultValue={settings.breakfastPrice}
           disabled={isUpdating}
-          onBlur={(e) => handleUpdate(e, "brealfastPrice")}
+          onBlur={(e) => handleUpdate(e, "breakfastPrice")}
         />
       </FormRow>
     </Form>
